@@ -47,11 +47,3 @@ if st.button("Vérifier le Match"):
     else:
         st.warning("S'il te plaît, remplis les deux cases.")
 
-# --- BOUTON ADMIN (En bas de page) ---
-st.write("---")
-if st.button("🧹 Vider la base de données (Admin)"):
-    registre_crushs = {}
-    with open(FICHIER_DONNEES, "w") as fichier:
-        json.dump(registre_crushs, fichier)
-    st.success("Base de données vidée ! Tout est remis à zéro.")
-    st.rerun()
